@@ -1,13 +1,29 @@
 <html>
 <head>
 <title>Typing test | KeltaKing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+.kel-hover{
+	transition-duration:.3s;
+	transition-function:ease-out;
+}
+
+.kel-weight{
+	font-weight:700;
+}
+
+</style>
 </head>
 
 <body>
 <center>
-	<form name="theForm">
-	<table BORDER=3 CELLSPACING=0 CELLPADDING=0>
-	<tr>
+<h1 class="kel-weight">Kelta Typing Test</h1>
+<div class="w3-content w3-yellow w3-margin w3-card">
+	<form name="theForm" class="w3-padding-64" id="form">
+	<table border="1" cellspacing="10px" cellpadding="10px" class="w3-blue">
+	<tr class="w3-yellow">
 	<td>Are you a....</td>
 	<td align=center>
 		<input type='radio' name="sme" value="Beginner" onClick="s()" checked>Beginner
@@ -15,24 +31,28 @@
 		<input type='radio' name="sme" value="Expert" onClick="e()">Expert
 	</td>
 	</tr>
-	<tr>
-	<td colspan=2><br>
+	<tr class="w3-yellow">
+	<td colspan=2 class="w3-padding-32"><br>
 		<center>
-		<input type=button value="Start Typing Test" name="start" onClick="beginIt()">
+		<input type="button" value="Start Typing Test" name="start" onClick="beginIt()"
+		class="w3-button kel-hover w3-blue w3-hover-green">
 		</center>
-		<textarea name="given" cols=53 rows=3 wrap=on onFocus="cheat()"></textarea>
+		<textarea name="given" cols=53 rows=3 class="w3-center w3-margin-top" wrap=on onFocus="cheat()" 
+		placeholder="Click start typing test"></textarea>
 	</td>
 	</tr>
-	<tr>
+	<tr class="w3-yellow">
 	<td colspan=2>
 		<center>
-		<input type=text name="typed" size=45>
-		<input type=button value="DONE"  name="stop"  onClick="stopIt()">
+		<input type="text" name="typed" class="w3-input">
+		<input type="button" value="Submit"  name="stop"  onClick="stopIt()"
+		class="w3-button w3-green kel-hover w3-margin-top">
 		</center>
 	</td>
 	</tr>
 	</table>
 	</form>
+</div>
 </center>
 <script src="index.js">
 </script>
