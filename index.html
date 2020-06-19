@@ -8,6 +8,7 @@
 .kel-hover{
 	transition-duration:.3s;
 	transition-function:ease-out;
+	cursor:pointer;
 }
 
 .kel-weight{
@@ -20,10 +21,14 @@
 <body>
 <center>
 <h1 class="kel-weight">Kelta Typing Test</h1>
-<div class="w3-content w3-yellow w3-margin w3-card">
+<div>
+Theme: <span class="w3-badge w3-white kel-hover w3-border" onclick="theme('white')">W</span>
+		<span class="w3-badge w3-black kel-hover" onclick="theme('black')">B</span>
+</div>
+<div class="w3-content w3-white w3-margin w3-card" id="">
 	<form name="theForm" class="w3-padding-64" id="form">
-	<table border="1" cellspacing="10px" cellpadding="10px" class="w3-blue">
-	<tr class="w3-yellow">
+	<table border="1" cellspacing="10px" cellpadding="10px" class="w3-blue" id="table">
+	<tr class="w3-white" id="row1">
 	<td>Are you a....</td>
 	<td align=center>
 		<input type='radio' name="sme" value="Beginner" onClick="s()" checked>Beginner
@@ -31,7 +36,7 @@
 		<input type='radio' name="sme" value="Expert" onClick="e()">Expert
 	</td>
 	</tr>
-	<tr class="w3-yellow">
+	<tr class="w3-white" id="row2">
 	<td colspan=2 class="w3-padding-32"><br>
 		<center>
 		<input type="button" value="Start Typing Test" name="start" onClick="beginIt()"
@@ -41,10 +46,10 @@
 		placeholder="Click start typing test"></textarea>
 	</td>
 	</tr>
-	<tr class="w3-yellow">
+	<tr class="w3-white" id="row3">
 	<td colspan=2>
 		<center>
-		<input type="text" name="typed" class="w3-input">
+		<input type="text" name="typed" class="w3-input w3-border" placeholder="Write here...">
 		<input type="button" value="Submit"  name="stop"  onClick="stopIt()"
 		class="w3-button w3-green kel-hover w3-margin-top">
 		</center>
