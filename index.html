@@ -27,6 +27,35 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 </div>
 <div class="w3-content w3-white w3-margin w3-card" id="">
 	<form name="theForm" class="w3-padding-64" id="form">
+	
+	<div class="w3-section w3-large">
+	Select the level: <input type='radio' name="sme" value="Beginner" onClick="s()" checked>Beginner
+		<input type='radio' name="sme" value="Novice" onClick="m()">Novice
+		<input type='radio' name="sme" value="Expert" onClick="e()">Expert
+	</div>
+	
+	<div class="w3-section">
+		<center>
+		<input type="button" value="Start Test" name="start" onClick="beginIt()"
+		class="w3-button kel-hover w3-blue w3-hover-green">
+		</center>
+		<textarea name="given" cols=70 rows=2 class="w3-center w3-margin-top" onFocus="cheat()"
+		placeholder="Click start test to start test"></textarea>
+	</div>
+	<hr>
+	<div class="w3-section">
+	Click on the Start Test button above to begin the test. Write the sentence shown in the above box.
+	</div>
+	<div class="w3-section">
+		<center>
+		<textarea cols=70 rows=2 name="typed" class="w3-border" placeholder="Write here..."></textarea>
+		</center>	
+	</div>
+	<div class="w3-section">
+		<input type="button" value="Submit"  name="stop"  onClick="stopIt()"
+		class="w3-button w3-green kel-hover w3-margin-top">
+	</div>
+	<!--
 	<table border="1" class="w3-blue" id="table">
 	<tr class="w3-white" id="row1">
 	<td>Are you a....</td>
@@ -56,6 +85,9 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 	</td>
 	</tr>
 	</table>
+	
+	-->
+	
 	</form>
 </div>
 </center>
