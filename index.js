@@ -97,6 +97,9 @@ let theme = (color) => {
 		r2.className = "w3-black";
 		r3.className = "w3-black";
 		
+		document.getElementById('tblack').className = "w3-badge w3-black kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar w3-border-blue";
+		document.getElementById('twhite').className = "w3-badge w3-white kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar";
+	
 	}
 	else if(color == "white"){
 		
@@ -104,7 +107,10 @@ let theme = (color) => {
 		r1.className = "w3-white";
 		r2.className = "w3-white";
 		r3.className = "w3-white";
+		document.getElementById('twhite').className = "w3-badge w3-white kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar w3-border-blue";
+		document.getElementById('tblack').className = "w3-badge w3-black kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar";
 		
+	
 	}
 	else{
 		alert("Something went wrong");
