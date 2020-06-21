@@ -25,7 +25,7 @@
 Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar w3-border-blue" onclick="theme('white')">W</span>
 		<span id="tblack" class="w3-badge w3-black kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar" onclick="theme('black')">B</span>
 </div>
-<div class="w3-content w3-white w3-margin w3-card" id="">
+<div class="w3-content w3-white w3-margin w3-card" id="back">
 	<form name="theForm" class="w3-padding-64" id="form">
 	
 	<div class="w3-section w3-large">
@@ -37,10 +37,10 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 	<div class="w3-section">
 		<center>
 		<input type="button" value="Start Test" name="start" onClick="beginIt()"
-		class="w3-button kel-hover w3-blue w3-hover-green">
+		class="w3-button kel-hover w3-blue w3-hover-green" id="start">
 		</center>
 		<textarea name="given" cols=70 rows=2 class="w3-center w3-margin-top" onFocus="cheat()"
-		placeholder="Click start test to start test"></textarea>
+		placeholder="Click start test to start test" id="given"></textarea>
 	</div>
 	<hr>
 	<div class="w3-section">
@@ -48,11 +48,11 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 	</div>
 	<div class="w3-section">
 		<center>
-		<textarea cols=70 rows=2 name="typed" class="w3-border" placeholder="Write here..."></textarea>
+		<textarea cols=70 rows=2 name="typed" id="write" class="w3-border" placeholder="Write here..."></textarea>
 		</center>	
 	</div>
 	<div class="w3-section">
-		<input type="button" value="Submit"  name="stop"  onClick="stopIt()"
+		<input type="button" value="Submit" id="submit" name="stop"  onClick="stopIt()"
 		class="w3-button w3-green kel-hover w3-margin-top">
 	</div>
 	<!--
