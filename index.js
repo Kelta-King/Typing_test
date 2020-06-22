@@ -58,23 +58,49 @@ let cheat = () => {
 
 }
 
+let once = 0;
+
 let stopIt = () => {
 
-	dayTwo = new Date();
-	endType = dayTwo.getTime();
-	totalTime = ((endType - startType)/1000);
-	spd = Math.round((word/totalTime)*60);
-	
-	if (document.theForm.typed.value == document.theForm.given.value) {
-		alert("\nYou typed a " + word + " word sentence in "+ totalTime + " seconds, a speed of about " + spd + " words per minute!");
+	if(once == 0){
+		
+		dayTwo = new Date();
+		endType = dayTwo.getTime();
+		totalTime = ((endType - startType)/1000);
+		spd = Math.round((word/totalTime)*60);
+		
+		if (document.theForm.typed.value == document.theForm.given.value) {
+			alert("\nYou typed a " + word + " word sentence in "+ totalTime + " seconds, a speed of about " + spd + " words per minute!");
+		}
+		else {
+			alert("You made an error, but typed at a speed of " + spd + " words per minute.");
+		}
+		
+		once += 1;
+		let scorebar = document.getElementById("score");
+		let temp = spd-10;
+			
+		x = setInterval(function(){
+			
+			scorebar.innerHTML = "<span style='font-size:24px;'>"+temp+"</span>/minute";
+			temp++;
+			if(temp > spd){
+				
+				clearInterval(x);
+				
+			}
+		
+		}, 30);
+		
+		scorebar.innerHTML = "<span style='font-size:24px;'>"+spd+"</span>/minute";
+		
 	}
-	else {
-		alert("You made an error, but typed at a speed of " + spd + " words per minute.");
+	else{
+		
+		//do nothing
+		
 	}
-	
-	let scorebar = document.getElementById("score");
-	scorebar.innerHTML = "<span style='font-size:24px;'>"+spd+"</span>/minute";
-	
+
 }
 
 let theme = (color) => {
