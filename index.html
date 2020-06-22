@@ -15,6 +15,14 @@
 	font-weight:700;
 }
 
+.kel-circle{
+	border-radius: 50%;
+    width: 110px;
+    height: 110px;
+	vertical-align: middle;
+	text-align: center;
+}
+
 </style>
 </head>
 
@@ -27,6 +35,12 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 </div>
 <div class="w3-content w3-white w3-margin w3-card" id="back">
 	<form name="theForm" class="w3-padding-64" id="form">
+	
+	<table class="kel-circle w3-light-blue" id="scoreTable">
+		<tr>
+			<td id="score"><span style="font-size:24px;">0</span>/minute</td>
+		</tr>
+	</table>
 	
 	<div class="w3-section w3-large">
 	Select the level: <input type='radio' name="sme" value="Beginner" onClick="s()" checked>Beginner
