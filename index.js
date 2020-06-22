@@ -72,6 +72,9 @@ let stopIt = () => {
 		alert("You made an error, but typed at a speed of " + spd + " words per minute.");
 	}
 	
+	let scorebar = document.getElementById("score");
+	scorebar.innerHTML = "<span style='font-size:24px;'>"+spd+"</span>/minute";
+	
 }
 
 let theme = (color) => {
@@ -90,6 +93,7 @@ let theme = (color) => {
 	let given = document.getElementById("given");
 	let write = document.getElementById("write");
 	let sub = document.getElementById("submit");
+	let circle = document.getElementById("scoreTable");
 	
 	if(color == "black"){
 		
@@ -99,6 +103,7 @@ let theme = (color) => {
 		write.className = "w3-border w3-dark-gray";
 		sub.className = "w3-button w3-green kel-hover w3-margin-top";
 		document.body.className = "w3-dark-gray";
+		circle.className = "kel-circle w3-dark-gray";
 		
 		document.getElementById('tblack').className = "w3-badge w3-black kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar w3-border-blue";
 		document.getElementById('twhite').className = "w3-badge w3-white kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar";
@@ -112,6 +117,7 @@ let theme = (color) => {
 		write.className = "w3-border";
 		sub.className = "w3-button w3-green kel-hover w3-margin-top";
 		document.body.className = "w3-white";
+		circle.className = "kel-circle w3-light-blue";
 		
 		document.getElementById('twhite').className = "w3-badge w3-white kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar w3-border-blue";
 		document.getElementById('tblack').className = "w3-badge w3-black kel-hover w3-rightbar w3-leftbar w3-topbar w3-bottombar";
