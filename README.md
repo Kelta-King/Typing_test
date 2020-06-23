@@ -1,5 +1,4 @@
 <h1>Typing_test</h1>
-<hr>
 <p>
 Test your typing speed...
 <a href="https://kelta-king.github.io/Typing_test/">Click here to test your typing skills</a>
