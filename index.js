@@ -54,6 +54,7 @@ let beginIt = () => {
 	document.theForm.given.value = msgType;
 	document.theForm.typed.focus();
 	document.theForm.typed.select();
+	document.getElementById("submit").style.visibility = "visible";
 	
 }
 
@@ -73,15 +74,20 @@ let stopIt = () => {
 		let words = document.theForm.typed.value;
 		words = words.split(" ");
 		let len = words.length;
-			
+		
 		dayTwo = new Date();
 		endType = dayTwo.getTime();
 		totalTime = ((endType - startType)/1000);
-		spd = Math.round((word/totalTime)*60);
+		spd = Math.round((len/totalTime)*60);
 		
 		if(document.theForm.typed.value == ""){
 			alert("You haven't write anything!");
 			spd = 0;
+			return;
+		}
+		else if(document.theForm.typed.value.length < document.theForm.given.value.length){
+			alert("Please complete the sentence");
+			return;
 		}
 		else if (document.theForm.typed.value == document.theForm.given.value) {
 			alert("\nYou typed a " + word + " word sentence in "+ totalTime + " seconds, a speed of about " + spd + " words per minute!");
@@ -107,13 +113,15 @@ let stopIt = () => {
 		}, 30);
 		
 		scorebar.innerHTML = "<span style='font-size:24px;'>"+spd+"</span>/minute";
-		document.theForm.typed.value = "";
-		document.theForm.given.value = "";
 
 	}
 	else{
 		//do nothing
 	}
+
+	document.theForm.typed.value = "";
+	document.theForm.given.value = "";
+	document.getElementById("submit").style.visibility = "hidden";
 
 }
 
