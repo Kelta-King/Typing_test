@@ -41,11 +41,12 @@ let s = () => {
 }
 let beginIt = () => {
 
-	if(!confirm("Are you ready to start he test?")){
+	if(!confirm("Are you ready to start the test?")){
 		return;
 	}
 	
 	document.theForm.given.value = "";
+	document.theForm.typed.value = "";
 	randNum = Math.floor((Math.random()*10))%4;
 	msgType = msg[randNum];
 	day = new Date();
@@ -68,13 +69,21 @@ let once = 0;
 let stopIt = () => {
 
 	if(once == 0){
-		
+	
+		let words = document.theForm.typed.value;
+		words = words.split(" ");
+		let len = words.length;
+			
 		dayTwo = new Date();
 		endType = dayTwo.getTime();
 		totalTime = ((endType - startType)/1000);
 		spd = Math.round((word/totalTime)*60);
 		
-		if (document.theForm.typed.value == document.theForm.given.value) {
+		if(document.theForm.typed.value == ""){
+			alert("You haven't write anything!");
+			spd = 0;
+		}
+		else if (document.theForm.typed.value == document.theForm.given.value) {
 			alert("\nYou typed a " + word + " word sentence in "+ totalTime + " seconds, a speed of about " + spd + " words per minute!");
 		}
 		else {
@@ -98,7 +107,9 @@ let stopIt = () => {
 		}, 30);
 		
 		scorebar.innerHTML = "<span style='font-size:24px;'>"+spd+"</span>/minute";
-		
+		document.theForm.typed.value = "";
+		document.theForm.given.value = "";
+
 	}
 	else{
 		//do nothing
