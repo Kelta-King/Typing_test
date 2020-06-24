@@ -23,7 +23,14 @@
 	vertical-align: middle;
 	text-align: center;
 }
-
+#given{
+	width:90%;
+	max-width:700px;
+}
+#write{
+	width:90%;
+	max-width:700px;
+}
 </style>
 </head>
 
@@ -54,7 +61,7 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 		<input type="button" value="Start Test" name="start" onClick="beginIt()"
 		class="w3-button kel-hover w3-blue w3-hover-green" id="start">
 		</center>
-		<textarea name="given" cols=70 rows=2 class="w3-center w3-margin-top" onFocus="cheat()"
+		<textarea name="given" class="w3-center w3-margin-top w3-border" onFocus="cheat()"
 		placeholder="Click start test to start test" id="given"></textarea>
 	</div>
 	<hr>
@@ -63,7 +70,7 @@ Theme: <span id="twhite" class="w3-badge w3-white kel-hover w3-rightbar w3-leftb
 	</div>
 	<div class="w3-section">
 		<center>
-		<textarea cols=70 rows=2 name="typed" id="write" class="w3-border" placeholder="Write here..."></textarea>
+		<textarea name="typed" id="write" class="w3-border" placeholder="Write here..."></textarea>
 		</center>	
 	</div>
 	<div class="w3-section">
