@@ -69,8 +69,6 @@ let once = 0;
 
 let stopIt = () => {
 
-	if(once == 0){
-	
 		let words = document.theForm.typed.value;
 		words = words.split(" ");
 		let len = words.length;
@@ -114,10 +112,7 @@ let stopIt = () => {
 		
 		scorebar.innerHTML = "<span style='font-size:24px;'>"+spd+"</span>/minute";
 
-	}
-	else{
-		//do nothing
-	}
+	
 
 	document.theForm.typed.value = "";
 	document.theForm.given.value = "";
